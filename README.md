@@ -13,7 +13,7 @@ almost verbatim. See the credits section on the page for the full lineage, inclu
 
 The original disclaimers are kept, because they matter as much as the point: this is only half
 serious, don't get mad at whoever sent you here, norms differ — and if the URL is in someone's
-status, expect a lone "Hello!" to be ignored.
+status, a lone "Hello!" may be left waiting a while.
 
 ## Running it
 
@@ -32,3 +32,14 @@ python3 -m http.server 8000
 | `assets/app.js` | Demo playback, the ping lab, scroll-spy, calm mode, copy link |
 
 Motion respects `prefers-reduced-motion`, and "Calm mode" in the sidebar turns it off by hand.
+
+## Deploying to GitHub Pages
+
+`.github/workflows/pages.yml` publishes the site with GitHub Actions — no `gh-pages`
+branch and no build step; the repo root is uploaded as-is and `.nojekyll` stops Jekyll
+from reinterpreting it.
+
+One-time setup after merging: **Settings → Pages → Build and deployment → Source →
+GitHub Actions**. The workflow then runs on every push to `main` (and can be started by
+hand from the Actions tab via *Run workflow*), publishing to
+`https://nidplays.github.io/no-hello/`.
