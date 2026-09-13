@@ -13,7 +13,7 @@ almost verbatim. See the credits section on the page for the full lineage, inclu
 
 The original disclaimers are kept, because they matter as much as the point: this is only half
 serious, don't get mad at whoever sent you here, norms differ — and if the URL is in someone's
-status, expect a lone "Hello!" to be ignored.
+status, a lone "Hello!" may be left waiting a while.
 
 ## Running it
 
