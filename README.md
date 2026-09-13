@@ -39,7 +39,11 @@ Motion respects `prefers-reduced-motion`, and "Calm mode" in the sidebar turns i
 branch and no build step; the repo root is uploaded as-is and `.nojekyll` stops Jekyll
 from reinterpreting it.
 
-One-time setup after merging: **Settings → Pages → Build and deployment → Source →
-GitHub Actions**. The workflow then runs on every push to `main` (and can be started by
-hand from the Actions tab via *Run workflow*), publishing to
-`https://nidplays.github.io/no-hello/`.
+The first run calls `actions/configure-pages` with `enablement: true`, which switches Pages
+on and sets its source to GitHub Actions, so no manual setup should be needed. If that step
+is refused (some org policies don't allow a workflow to enable Pages), turn it on once by
+hand under **Settings → Pages → Build and deployment → Source → GitHub Actions** and re-run
+the workflow.
+
+It runs on every push to `main`, and can be started by hand from the Actions tab via
+*Run workflow*. The site publishes to `https://nidplays.github.io/no-hello/`.

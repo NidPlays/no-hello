@@ -25,6 +25,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # enablement: true turns Pages on (and sets the source to Actions)
+      # the first time this runs, so the deploy below doesn't 404 on a repo
+      # where Pages was never switched on by hand.
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
       # The site is plain HTML/CSS/JS — no build step, so the repo root
       # is uploaded as-is. .nojekyll keeps Jekyll from touching it.
       - uses: actions/upload-pages-artifact@v3
