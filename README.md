@@ -32,3 +32,14 @@ python3 -m http.server 8000
 | `assets/app.js` | Demo playback, the ping lab, scroll-spy, calm mode, copy link |
 
 Motion respects `prefers-reduced-motion`, and "Calm mode" in the sidebar turns it off by hand.
+
+## Deploying to GitHub Pages
+
+`.github/workflows/pages.yml` publishes the site with GitHub Actions — no `gh-pages`
+branch and no build step; the repo root is uploaded as-is and `.nojekyll` stops Jekyll
+from reinterpreting it.
+
+One-time setup after merging: **Settings → Pages → Build and deployment → Source →
+GitHub Actions**. The workflow then runs on every push to `main` (and can be started by
+hand from the Actions tab via *Run workflow*), publishing to
+`https://nidplays.github.io/no-hello/`.
