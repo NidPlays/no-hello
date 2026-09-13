@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Don't Just Say Hello</title>
+
+<meta name="title" content="no hello" />
+<meta name="description" content="Please don't open a chat with just &quot;hello&quot; — ask the question in the same message." />
+<meta name="color-scheme" content="dark light" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="no hello" />
+<meta property="og:description" content="Please don't open a chat with just &quot;hello&quot; — ask the question in the same message." />
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:title" content="no hello" />
+<meta property="twitter:description" content="Please don't open a chat with just &quot;hello&quot; — ask the question in the same message." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>👋</text></svg>" />
+</head>
+<body>
+
+<a class="skip" href="#thread">Skip to the point</a>
+
+<div class="app">
+
+  <!-- ===== left rail: chat-client chrome doubling as section nav ===== -->
+  <aside class="rail" aria-label="Sections">
+    <div class="rail-head">
+      <span class="mark" aria-hidden="true">👋</span>
+      <span class="rail-title">no&nbsp;hello</span>
+    </div>
+    <nav class="rail-nav">
+      <a href="#thread" class="ch is-active"><span class="ch-hash">#</span>the-problem<span class="unread" aria-hidden="true">1</span></a>
+      <a href="#compare"><span class="ch-hash">#</span>side-by-side</a>
+      <a href="#ping-lab"><span class="ch-hash">#</span>ping-lab</a>
+      <a href="#why"><span class="ch-hash">#</span>why-it-works</a>
+      <a href="#polite"><span class="ch-hash">#</span>but-isnt-it-rude</a>
+      <a href="#disclaimer"><span class="ch-hash">#</span>please-dont-be-mad</a>
+      <a href="#credits"><span class="ch-hash">#</span>credits</a>
+    </nav>
+    <div class="rail-foot">
+      <button type="button" id="motion-toggle" class="ghost-btn" aria-pressed="false">Calm mode</button>
+      <p class="rail-note">A tiny tribute to <a href="https://nohello.com/">nohello.com</a> and <a href="https://nohello.net/">nohello.net</a>.</p>
+    </div>
+  </aside>
+
+  <main class="thread" id="thread">
+
+    <!-- ===== hero ===== -->
+    <header class="hero">
+      <p class="eyebrow">Chat etiquette · est. 2013</p>
+      <h1>Don't just say<br /><em>“hello”.</em></h1>
+      <p class="lede">
+        Say hello <strong>and</strong> the question, in the same message. One keystroke's difference for you;
+        minutes back for whoever you pinged.
+      </p>
+
+      <div class="demo-wrap">
+        <section class="win" id="demo" aria-label="A chat that opens with hello">
+          <div class="win-bar">
+            <div class="win-who">
+              <span class="avatar av-k" aria-hidden="true">K<i class="presence busy"></i></span>
+              <span>
+                <b>Keith</b>
+                <small>Chat · Do not disturb</small>
+              </span>
+            </div>
+            <div class="win-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          </div>
+
+          <div class="win-body" id="demo-body">
+            <ol class="msgs" id="demo-msgs" aria-live="polite"></ol>
+          </div>
+
+          <div class="win-foot">
+            <div class="clock" id="clock">
+              <span class="clock-label">Question still unasked for</span>
+              <span class="clock-val" id="clock-val">0:00</span>
+            </div>
+            <button type="button" class="btn" id="replay">Replay</button>
+          </div>
+        </section>
+
+        <aside class="annot" aria-label="What just happened">
+          <h2 class="annot-h">What the “hello” actually sends</h2>
+          <ul class="annot-list">
+            <li><span class="tick" aria-hidden="true"></span>A notification, a badge, a sound, and a taskbar flash.</li>
+            <li><span class="tick" aria-hidden="true"></span>Zero information about what's needed.</li>
+            <li><span class="tick" aria-hidden="true"></span>An obligation to sit still and wait for part two.</li>
+            <li><span class="tick" aria-hidden="true"></span>A thread that is useless if either of you walks away.</li>
+          </ul>
+          <p class="annot-kicker">It's the chat equivalent of phoning someone, saying “hi!”, and putting them on hold. 🤦</p>
+        </aside>
+      </div>
+    </header>
+
+    <!-- ===== side by side ===== -->
+    <section class="sec" id="compare">
+      <p class="eyebrow">The whole argument</p>
+      <h2>Same request. Same politeness. Four minutes apart.</h2>
+
+      <div class="compare">
+        <article class="win win-bad reveal">
+          <div class="win-bar"><span class="verdict bad">Don't do this</span><span class="span-time mono">4m 51s</span></div>
+          <div class="win-body">
+            <ol class="msgs static">
+              <li class="msg them"><span class="meta"><b>Keith</b> <time>2:15 PM</time></span><p>hi</p></li>
+              <li class="msg me"><span class="meta"><b>Tim</b> <time>2:19 PM</time></span><p>...?</p></li>
+              <li class="msg them"><span class="meta"><b>Keith</b> <time>2:20 PM</time></span><p>what time was taht thing again?</p></li>
+              <li class="msg me"><span class="meta"><b>Tim</b> <time>2:20 PM</time></span><p>oh — 3:30 mate</p></li>
+            </ol>
+          </div>
+          <p class="win-note">Keith could have had his answer minutes sooner — and Tim spent four of those minutes wondering what was coming.</p>
+        </article>
+
+        <article class="win win-good reveal">
+          <div class="win-bar"><span class="verdict good">Try this instead</span><span class="span-time mono">0m 41s</span></div>
+          <div class="win-body">
+            <ol class="msgs static">
+              <li class="msg them"><span class="meta"><b>Dawn</b> <time>2:15 PM</time></span><p>Hiya! What time was that thing?</p></li>
+              <li class="msg me"><span class="meta"><b>Tim</b> <time>2:15 PM</time></span><p>hey, 3:30</p></li>
+              <li class="msg them"><span class="meta"><b>Dawn</b> <time>2:15 PM</time></span><p>Ta — seeya then!</p></li>
+              <li class="msg me"><span class="meta"><b>Tim</b> <time>2:16 PM</time></span><p>👌 np</p></li>
+            </ol>
+          </div>
+          <p class="win-note">Dawn said hello too. She just didn't stop there.</p>
+        </article>
+      </div>
+
+      <div class="chips" aria-label="Openers that have the same problem">
+        <p class="chips-h">Counts as “hello”:</p>
+        <ul>
+          <li>“you around?”</li><li>“yt?”</li><li>“ping”</li><li>“got a sec?”</li>
+          <li>“quick question…”</li><li>“hi Sophie —”</li><li>“can I ask you something?”</li><li>“u there”</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== ping lab ===== -->
+    <section class="sec" id="ping-lab">
+      <p class="eyebrow">Interactive</p>
+      <h2>The ping lab</h2>
+      <p class="sec-lede">
+        Pick an opener. This is the notification that lands on the other person's screen — and everything
+        they can do about it.
+      </p>
+
+      <div class="lab">
+        <div class="lab-choices" role="group" aria-label="Choose an opener">
+          <button type="button" class="opener is-on" data-kind="bad" data-text="Hello">Hello</button>
+          <button type="button" class="opener" data-kind="bad" data-text="you got a sec?">you got a sec?</button>
+          <button type="button" class="opener" data-kind="bad" data-text="quick question">quick question</button>
+          <button type="button" class="opener" data-kind="good" data-text="Hey! Do you have the WiFi password?">Hey! Do you have the WiFi password?</button>
+          <button type="button" class="opener" data-kind="good" data-text="Morning — can you approve PR #412 when you get a sec?">Morning — can you approve PR #412 when you get a sec?</button>
+          <button type="button" class="nudge-btn" id="nudge">🔔 Send a nudge</button>
+        </div>
+
+        <div class="lab-stage">
+          <div class="phone" id="phone">
+            <div class="phone-top"><span class="mono" id="phone-clock">2:15 PM</span><span class="sig" aria-hidden="true"></span></div>
+            <div class="toasts" id="toasts" aria-live="polite" aria-label="Notifications"></div>
+            <p class="phone-hint">Notifications from <b>Chat</b></p>
+          </div>
+
+          <dl class="readout" id="readout">
+            <div><dt>Can they answer it?</dt><dd id="r-answer">No — there's nothing to answer.</dd></div>
+            <div><dt>Cost to them</dt><dd id="r-cost">One interruption, no progress.</dd></div>
+            <div><dt>If they're away</dt><dd id="r-away">The thread is dead until you're both online.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== why ===== -->
+    <section class="sec" id="why">
+      <p class="eyebrow">Why this matters more in chat than in person</p>
+      <h2>Chat is not a phone call. That's the feature.</h2>
+
+      <div class="cards">
+        <article class="card reveal">
+          <span class="card-k mono">01</span>
+          <h3>Typing is slower than talking</h3>
+          <p>In person, the pause between “hi” and your question is a second. In chat it's however long you take to compose it — while they sit there watching “typing…”.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-k mono">02</span>
+          <h3>Async only works if there's content</h3>
+          <p>A question left in a thread can be answered at 7am, from a phone, by someone else entirely. A lone “Hello” can only be answered by you, later, in person.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-k mono">03</span>
+          <h3>A notification is a bill</h3>
+          <p>Every ping spends a bit of someone's attention. Make it buy something. Two pings for one answer is twice the price for the same goods.</p>
+        </article>
+        <article class="card reveal">
+          <span class="card-k mono">04</span>
+          <h3>Future-you is searching this</h3>
+          <p>“Hello / hi / hey” is unsearchable. “What's the staging DB password rotation policy?” is the thing you'll be grepping your own history for in eight months.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== politeness ===== -->
+    <section class="sec" id="polite">
+      <p class="eyebrow">The common objection</p>
+      <h2>“But firing off a question feels rude.”</h2>
+      <p class="sec-lede">
+        Then don't fire off a question — send pleasantries <em>and</em> the question. Nobody is asking you to be
+        curt. You can be as warm as you like, as long as the warmth and the ask arrive together.
+      </p>
+
+      <ul class="examples">
+        <li><span class="ok" aria-hidden="true">✓</span> “hey man, what's up? also, any idea when that thing's due?”</li>
+        <li><span class="ok" aria-hidden="true">✓</span> “Hi there! Hope you're well. I'm after the latest deck, whenever you get a sec :)”</li>
+        <li><span class="ok" aria-hidden="true">✓</span> “Morning! No rush at all — could you update those NFRs today?”</li>
+        <li><span class="ok" aria-hidden="true">✓</span> “Hiya 👋 sorry to interrupt — does the Friday demo need a dry run?”</li>
+      </ul>
+      <p class="sec-kicker">Notice that every one of them still says hello. <strong>Hello isn't the problem. Hello <em>alone</em> is.</strong></p>
+    </section>
+
+    <!-- ===== disclaimers ===== -->
+    <section class="sec" id="disclaimer">
+      <p class="eyebrow">Please read this bit</p>
+      <h2>Seriously — don't get mad.</h2>
+
+      <div class="notes">
+        <article class="note">
+          <h3>This is only half serious. Maybe less.</h3>
+          <p>It's a chat convention, not a moral failing. If somebody sent you this link, they were being cheeky, not filing a complaint about you as a person. Please don't get mad at them.</p>
+        </article>
+        <article class="note">
+          <h3>And don't be smug about it either.</h3>
+          <p>Linking this at a colleague mid-conversation is its own kind of rude. It's a gentle nudge for people who'd genuinely like to know — not a citation to win an argument with.</p>
+        </article>
+        <article class="note">
+          <h3>Norms differ. Yours might be fine.</h3>
+          <p>Plenty of workplaces and cultures open with a greeting on purpose, and plenty of people are typing on their second or third language. Read the room you're actually in; this site isn't the boss of it.</p>
+        </article>
+        <article class="note note-warn">
+          <h3>Fair warning, though.</h3>
+          <p>If you see this site's URL in someone's status, bio, or signature — be prepared to be ignored if all you send is “Hello!”</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== credits ===== -->
+    <section class="sec" id="credits">
+      <p class="eyebrow">Standing on the shoulders of people who were annoyed first</p>
+      <h2>Credits &amp; the older sites</h2>
+      <p class="sec-lede">
+        None of this is an original idea. This page is a re-skin with better animation — the argument was
+        made, and made well, years ago. Go read the originals.
+      </p>
+
+      <ol class="lineage">
+        <li class="line-item reveal">
+          <span class="year mono">2013</span>
+          <div>
+            <h3><a href="https://www.nohello.com/">nohello.com</a></h3>
+            <p>The original. A single Blogger page — “Don't Just Say Hello in Chat” — that started the whole thing and which every site since, including this one, is a remix of. The <a href="https://web.archive.org/web/20131127020115/http://www.nohello.com/">2013 archive</a> is worth a look.</p>
+          </div>
+        </li>
+        <li class="line-item reveal">
+          <span class="year mono">then</span>
+          <div>
+            <h3><a href="https://nohello.net/">nohello.net</a></h3>
+            <p>The version most people have actually been sent. Keith, Tim and Dawn — and the “imagine calling someone and putting them on hold” line — are theirs; this page reuses their example exchanges almost verbatim. Their avatars come from <a href="https://en.wikipedia.org/wiki/The_Office_(British_TV_series)">The Office</a>, it's translated into 18 languages, and it's <a href="https://github.com/nohello-net/site">open source on GitHub</a>.</p>
+          </div>
+        </li>
+        <li class="line-item reveal">
+          <span class="year mono">also</span>
+          <div>
+            <h3><a href="https://nohello.club/">nohello.club</a></h3>
+            <p>The No Hello Club — a longer, gentler write-up of the same idea, with more room given to the “why” and to people who disagree.</p>
+          </div>
+        </li>
+        <li class="line-item reveal">
+          <span class="year mono">also</span>
+          <div>
+            <h3><a href="https://no-hello.net/">no-hello.net</a></h3>
+            <p>The short, hyphenated one with the fading chat bubbles — the direct inspiration for the animated demo at the top of this page.</p>
+          </div>
+        </li>
+        <li class="line-item reveal">
+          <span class="year mono">cousins</span>
+          <div>
+            <h3><a href="https://dontasktoask.com/">dontasktoask.com</a> · <a href="https://xyproblem.info/">The XY Problem</a> · <a href="http://www.catb.org/~esr/faqs/smart-questions.html">How To Ask Questions The Smart Way</a></h3>
+            <p>The same complaint from three other angles: don't ask to ask, don't describe your attempted fix instead of your actual problem, and — the elder statesman of them all, by Eric S. Raymond — ask in a way that can be answered.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="share">
+        <button type="button" class="btn btn-primary" id="copy">Copy the link</button>
+        <span class="share-note" id="copy-note" role="status"></span>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <p>An affectionate re-creation. All credit to <a href="https://www.nohello.com/">nohello.com</a>, <a href="https://nohello.net/">nohello.net</a>, <a href="https://nohello.club/">nohello.club</a> and <a href="https://no-hello.net/">no-hello.net</a> — please go and be annoyed at them instead.</p>
+      <p class="foot-sign">Now go and ask your question. 👋</p>
+    </footer>
+
+  </main>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
